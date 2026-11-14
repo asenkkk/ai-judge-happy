@@ -3,7 +3,7 @@ import shutil
 from pathlib import Path
 
 def main():
-    src = Path("image.png")
+    src = Path(__file__).resolve().parent / "image.png"
     dst_dir = Path("/output")
     dst_dir.mkdir(parents=True, exist_ok=True)
     dst = dst_dir / "entry.png"
